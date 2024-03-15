@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My home page</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/3c4d66d93b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline id="backVideo">
+            <source src="./Office - 80314.mp4" type="video/mp4" >
+        </video>
+        <i class="fa-solid fa-bars" id="icon1"></i>
+
+        <div class="sidebar">
+            <div class="top-links">
+                <i class="fa-solid fa-arrow-right" id="arrow-icon"></i>
+                <div>
+                    <i id="play" class="fa-solid fa-play" ></i>
+                    <i id="link" class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+                <h1>8 Essential tips to become a better coder</h1> <br>
+                <h3>Follow  These Steps:</h3> <br>
+                <p>1. Remind yourself how much you have to learn <br>
+                    2. Stop trying to prove yourself right <br>
+                    3. “The code works” isn’t where you stop; it’s where you start <br>
+                    4. Read code. Read lots of code <br>
+                    5. Write code, and not just as assignments <br>
+                    6. Work one-on-one with other developers any way you can <br>
+                    7. Learn techniques, not tools <br>
+                    8. Focus while coding
+                </p>
+
+                <a href="#">More Details</a>
+            </div>
+
+            <img src="./circled-play.png" alt="play" id="btn">
+    </div>
+
+
+
+
+    <script>
+        let backVideo = document.getElementById("backVideo");
+        let btn = document.getElementById("btn");
+
+        btn.onclick= function(){
+            backVideo.style.display="block";
+
+            if(backVideo.paused){
+                backVideo.play();
+                btn.src = "circled-play.png";
+            }
+            else{
+                backVideo.pause();
+                btn.src = "pause.png";
+            }
+        }
+    </script>
+</body>
+</html>
